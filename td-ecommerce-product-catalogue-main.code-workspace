@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../td-ecommerce-product-catalogue-main"
+		},
+		{
+			"name": "stutern-myfavourite-meal",
+			"path": "../stutern-myfavourite-meal"
+		},
+		{
+			"name": "stutern-week4-project1",
+			"path": "../stutern-week4-project1"
+		},
+		{
+			"name": "E-commerce-website",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "td-ecommerce-product-catalogue-main"
+	}
+}
