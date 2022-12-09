@@ -19,41 +19,47 @@ hamburger.addEventListener('click', ()=>{
      
 });
 // ==================================
-// 2. Display products based on 
+// 2. Display products based on search
 
 const search =  document.querySelector(".search_product");
+const lment = document.createElement("span");
+lment.textContent = "Item Not found"
+lment.classList.add("found");
+lment.style.fontSize = "50px"
+lment.style.textAlign = "center"
+
+const marzen = document.getElementById("marzen").appendChild(lment);
+find = document.querySelector(".found")
 search.addEventListener('input', ()=>{
 
 const catalogue = document.querySelectorAll('.catalogue')
-const find  = document.querySelector('.find')
+// const find  = document.querySelector('.find')
 
-    catalogue.forEach(element =>{
+const  blank = [];    
+catalogue.forEach(element =>{
         element.style.display = "none"
       
-       
         product= search.value
         productEl = element.textContent.toUpperCase();
         elProduct = element.textContent.toLowerCase();
+        
 
         if (productEl.includes(product) || elProduct.includes(product) || element.textContent.includes(product)){
             element.style.display = "block"
-             find.textContent = " ";
+            // blank.push(element)
+             
             //  find.style.display = "none"
             
            
 
-        }else{
-           element.style.display = "none"
-        find.textContent = "Item Not Found"
-        find.style.color ="white"
-         find.style.backgroundColor ="red"
-          find.style.fontSize ="50px"
-       
-
-
-        
         }
 
     })
+    // if (blank.length == 0) {
+    //   find.style.display = "block"
+      
+    // }else{
+    //   find.style.display = "none"
+    // }
 
  });
