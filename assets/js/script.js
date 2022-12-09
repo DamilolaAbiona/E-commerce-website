@@ -22,6 +22,7 @@ hamburger.addEventListener('click', ()=>{
 // 2. Display products based on search
 
 const search =  document.querySelector(".search_product");
+// New Element For ERROR MESSAGE
 const lment = document.createElement("span");
 lment.textContent = "Item Not found"
 lment.classList.add("found");
@@ -29,13 +30,14 @@ lment.style.fontSize = "70px"
 lment.style.textAlign = "center"
 lment.style.backgroundColor = "#439A97"
 lment.style.color = "white"
+lment.style.display = "none"
 
 const marzen = document.getElementById("marzen").appendChild(lment);
 find = document.querySelector(".found")
 search.addEventListener('input', ()=>{
 
 const catalogue = document.querySelectorAll('.catalogue')
-// const find  = document.querySelector('.find')
+
 
 const  blank = [];    
 catalogue.forEach(element =>{
@@ -49,9 +51,8 @@ catalogue.forEach(element =>{
 
         if (productEl.includes(product) || elProduct.includes(product) || element.textContent.includes(product)){
             element.style.display = "block"
-            // blank.push(element)
              
-            //  find.style.display = "none"
+             find.style.display = "none"
             
            
 
