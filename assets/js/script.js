@@ -25,8 +25,10 @@ const search =  document.querySelector(".search_product");
 const lment = document.createElement("span");
 lment.textContent = "Item Not found"
 lment.classList.add("found");
-lment.style.fontSize = "50px"
+lment.style.fontSize = "70px"
 lment.style.textAlign = "center"
+lment.style.backgroundColor = "#439A97"
+lment.style.color = "white"
 
 const marzen = document.getElementById("marzen").appendChild(lment);
 find = document.querySelector(".found")
@@ -38,6 +40,7 @@ const catalogue = document.querySelectorAll('.catalogue')
 const  blank = [];    
 catalogue.forEach(element =>{
         element.style.display = "none"
+        find.style.display = "none"
       
         product= search.value
         productEl = element.textContent.toUpperCase();
@@ -55,11 +58,11 @@ catalogue.forEach(element =>{
         }
 
     })
-    // if (blank.length == 0) {
-    //   find.style.display = "block"
+    if (blank.length == 0) {
+      find.style.display = "block"
       
-    // }else{
-    //   find.style.display = "none"
-    // }
+    }else{
+      find.style.display = "none"
+    }
 
  });
