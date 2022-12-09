@@ -51,7 +51,7 @@ catalogue.forEach(element =>{
 
         if (productEl.includes(product) || elProduct.includes(product) || element.textContent.includes(product)){
             element.style.display = "block"
-             
+             blank.push(element)
              find.style.display = "none"
             
            

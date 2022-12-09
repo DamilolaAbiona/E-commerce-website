@@ -247,6 +247,7 @@ article .tab-panel {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
 .found{
   padding: 1rem 3rem;
   font-size: 2rem;
